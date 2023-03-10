@@ -1,13 +1,11 @@
 import validator from './validator.js';
 
-console.log(validator);
-
 const ceros= "0000 0000 0000 0000";
 const cero="00";
 const cvc="123";
 
 const boton1 = document.getElementById("boton");
-const boton2 = document.getElementById("boton2");
+
 const segundapantalla = document.getElementById("segunda-pantalla");
 const datosprimerapantalla = document.getElementById("datosgenerales");
 
@@ -41,12 +39,12 @@ boton1.addEventListener("click", Confirmacion);
 segundapantalla.style.display="none";
 
 cajaNumero.addEventListener('keyup', (e) =>{
-  let valorInput = e.target.value;
+  const valorInput = e.target.value;
   cajaNumero.value = valorInput
   //Eliminar espacio de texto, lo reemplaza por nada
-  .replace(/\s/g, "")
-   //espaciado cada 4 numeros
-  .replace(/([0-9]{4})/g, "$1 ")
+    .replace(/\s/g, "")
+    //espaciado de numeros
+    .replace(/([0-9]{4})/g, "$1 ")
  
   /*.replace(valorInput,function () {
                    let i=0;
@@ -58,7 +56,7 @@ cajaNumero.addEventListener('keyup', (e) =>{
                   })
   */
   //quitar ultimo espacio
-  .trim();
+    .trim();
 }
 )
 
@@ -72,7 +70,7 @@ function myFunction1() {
 
 function myFunction2() {
   const creditCardNumber=cajaNumero.value;
-  let escondido= validator.Maskify(creditCardNumber);
+  const escondido = validator.Maskify(creditCardNumber);
   liveNumero.innerHTML = escondido;
  
   if (!cajaNumero.value){
@@ -195,7 +193,7 @@ function Confirmacion(){
     errorCvc.innerHTML = "ERROR";
   }
 
-  if (ra==1 && rb==1 && rc==1 && re==1 && rd==1 && rf==1){
+  if (ra===1 && rb===1 && rc===1 && re===1 && rd===1 && rf===1){
     Segundapantalla();
   }
 }
