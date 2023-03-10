@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap');
+
+
+body{
+    font-family: 'Baloo Da 2', cursive;
+    background-image: url("images/fondo.avif");
+}
+h1{
+    font-family: 'Baloo Da 2', cursive;
+    color: #AAE3E2;
+    font-size: 50px;
+    
+}
+
+.pantallas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.todocontenido{
+    background: white;
+    border-radius: 5%;
+    margin: 50px;
+    
+    padding:20px;
+
+}
+
+.contenedor1{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contenedor-bar input{
+    display:flex;
+    width: 250px;
+
+}
+
+.buscar-bar {
+    display: flex;
+    border-radius: 10px;
+    max-width: 500px;
+    height: 30px;
+    border:3px solid #e0f7f6;
+  }
+.buscar-bar input{
+    background: transparent;
+    flex:1;
+    border:0;
+    outline:none;
+    padding: 10px 20px;   
+}
+
+.buscar-bar button img{
+    width: 20px;
+}
+.buscar-bar button{
+    border:0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #AAE3E2;
+}
+nav{
+    padding-top: 19px;
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    color: #222;
+    font-size: 18px;
+    letter-spacing: .5px ;
+    padding: 0 20px;
+    cursor: pointer;
+}
+a:before,
+a:after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background: #AAE3E2;
+    transition: .5s;
+}
+
+a::after{
+    left: 0;
+    bottom: -10px;
+}
+a:before{
+    right: 0;
+    top: -10px;
+}
+a:hover:after,
+a:hover:before{
+    width: 100%;
+}
+
+.productos img{
+    width: 70px;
+}
+.botones-bar button{
+    background: transparent;
+    border:0;
+}
+
+
+.producto1, .producto2{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:10px;
+    padding: 20px;
+}
+
+.productos button{
+    display:flex;
+    border:0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+.productos input{
+    border-radius: 20%;
+    border: 1px solid rgb(105, 105, 105);;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.textocuadro{
+    display:flex;
+    justify-content: space-around;
+    border-bottom:1px solid black;
+    
+
+}
+.productos{
+    border:2px solid #FFCEFE;
+    box-shadow:#FFCEFE 0px 20px 25px -5px, #FFCEFE 0px 10px 10px -5px;
+    border-radius: 20px;
+}
+
+.total{
+    display:flex;
+    justify-content: space-around;
+    border-top:1px solid black;
+}
+
+#x2,#x1{
+    background: black;
+    color: white;
+    align-items: center;
+}
+
+.vistas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productos{
+    display:flex;
+    width: 600px;
+    flex-direction:column;
+}
+
+#vista-frontal{
+    position: relative;
+    margin-top: -57px;
+    margin-right: 40px;
+}
+
+.pie-pagina{
+    background-color: #AAE3E2;
+}
+
+#live-cvc{
+    position: relative;
+    margin-top :-227px;
+    margin-left: 270px;
+    
+}
+#live-tarjeta{
+    position:relative;
+    margin-top:110px;
+    margin-left:80px;
+    
+}
+#live-nombre{
+    position: relative;
+    margin-top: 32px;
+    margin-left: 27px;
+   
+}
+#live-mes{
+    position:relative;
+    margin-top: -42px;
+    margin-left: 250px;
+    
+}
+#linea{
+    position: relative;
+    margin-top: -42px;
+    margin-left: 268px;
+   
+}
+#live-año{
+    position: relative;
+    margin-top: -44px;
+    margin-left: 275px;
+   
+}
+
+#datosgenerales{
+    display: flex;
+    flex-direction: column;
+    color: hsl(278, 68%, 11%);
+    background-color: hsl(0, 0%, 100%);
+    margin-top:50px;
+}
+
+#nombre-tarjeta{
+    margin-bottom:5px;
+    margin-top:10px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid hsl(249, 99%, 64%, 0.8);  
+}
+
+#nombre-tarjeta:focus, #numero-tarjeta:focus, #mes:focus, #year:focus, #cvc:focus   {
+    outline: none;
+    border: 1px solid hsl(278, 94%, 30%); 
+}
+#errornombre, #errornumero, #errormes, #erroraño, #errorcvc{
+    color:  hsl(0, 100%, 66%);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#boton{
+    background: #AAE3E2;
+    width: 100px;
+    height: 40px;
+    border-radius: 10%;
+    border:transparent;
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+}
+
+#cajaboton{
+    display:flex;
+    justify-content: center;
+}
+#cajaerrores{
+    display:flex;
+    justify-content: space-between;
+}
+
+#numero-tarjeta{
+    margin-top:5px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom:5px;
+    border: 1px solid hsl(249, 99%, 64%, 0.8);
+}
+
+#bloque-mesaño{
+    display: flex;
+    flex-direction: column;
+}
+
+#caja-mesaño{
+    display: flex;
+    flex-direction: row;
+}
+
+#bloque-añomescvc{
+    display: flex;
+    flex-direction: row;
+    margin-bottom:5px;
+}
+
+#caja-cvc{
+    width: 100%;
+    margin-left: 10px;  
+}
+#mes{
+    width:80px;
+    margin-top:10px;
+    border-radius: 5px;
+    border: 1px solid hsl(249, 99%, 64%, 0.8);
+}
+
+#year{
+    border-radius: 5px;
+    width:80px;
+    margin-top:10px;
+    margin-left:10px;
+    border: 1px solid hsl(249, 99%, 64%, 0.8);
+}
+
+#cvc{
+    width: 100%;
+    margin-top:10px;
+    border-radius: 5px; 
+    border: 1px solid hsl(249, 99%, 64%, 0.8);
+}
+
+#datosgenerales input{
+    height: 30px;
+}
