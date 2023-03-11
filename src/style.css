@@ -24,9 +24,8 @@ h1{
     background: white;
     border-radius: 5%;
     margin: 50px;
-    
     padding:20px;
-
+    padding-bottom: 50px;
 }
 
 .contenedor1{
@@ -246,14 +245,13 @@ a:hover:before{
     margin-bottom: 5px;
 }
 
-#boton{
+#boton, #recuadro2 button{
     background: #AAE3E2;
     width: 100px;
     height: 40px;
     border-radius: 10%;
     border:transparent;
     font-size: 17px;
-    font-weight: bold;
     color: black;
 }
 
@@ -318,4 +316,17 @@ a:hover:before{
 
 #datosgenerales input{
     height: 30px;
+}
+
+#tarjetacheck{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+#recuadro2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:40px;
 }

@@ -129,9 +129,6 @@ function Confirmacion(){
   if (regExp.test(cajaNumero.value)) {
     errorNumero.innerHTML = mensaje;
     cajaNumero.style.border = colorojo;
-  } else if (cajaNumero.value.length>0 && cajaNumero.value.length<19){
-    errorNumero.innerHTML = "Faltan digitos";
-    cajaNumero.style.border = colorojo;
   } else if (!cajaNumero.value) {
     errorNumero.innerHTML = mensaje2;
     cajaNumero.style.border = colorojo;
@@ -189,8 +186,10 @@ function Confirmacion(){
 
   if ( valido === true){
     rf=1;
+    cajaCvc.style.border = null;
   }else{
-    errorCvc.innerHTML = "ERROR";
+    errorNumero.innerHTML = "Número de tarjeta no válido";
+    cajaNumero.style.border = colorojo;
   }
 
   if (ra===1 && rb===1 && rc===1 && re===1 && rd===1 && rf===1){

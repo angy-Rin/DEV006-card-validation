@@ -2,8 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/login.png">
     <title>Bunny Paws | Confirmación de Pago </title>
     <link rel="stylesheet" href="style.css" />
+
   </head>
   <body>
     <section class="todocontenido">
@@ -73,15 +75,24 @@
           
         </div>
 
-        <div id="live-datos">
-          <p id="live-cvc"> <span>123</span> </p>
-          <p id="live-tarjeta" >  <span> 0000 0000 0000 0000</span> </p>
-          <p id="live-nombre"> <span>Martha Guillermina</span> </p>
-          <p id="live-mes"> <span>00</span> </p>
-          <p id="linea"> / </p>
-          <p id="live-año"> <span>00</span> </p>
+        <section class="tarjetacheck">
+          <div id="live-datos">
+            <p id="live-cvc"> <span>123</span> </p>
+            <p id="live-tarjeta" >  <span> 0000 0000 0000 0000</span> </p>
+            <p id="live-nombre"> <span>Martha Guillermina</span> </p>
+            <p id="live-mes"> <span>00</span> </p>
+            <p id="linea"> / </p>
+            <p id="live-año"> <span>00</span> </p>        
+          </div>
           
-        </div>
+          <section id="segunda-pantalla">
+            <div id="recuadro2">
+              <img src="images/check.png" width="60px">
+              <p id="titulo2">SUS DATOS SE HAN GUARDADO</p>
+              <button>Siguiente</button>
+            </div>
+          </section>
+        </section>
 
         <div id="datosgenerales">
           <form>
@@ -122,16 +133,12 @@
         </div>
 
       </section>
+      
     </section>
 
-    <section id="segunda-pantalla">
-      <div id="recuadro2">
-        <p id="titulo1"> GRACIAS!</p>
-        <p id="titulo2">SUS DATOS SE HAN GUARDADO</p>
-        <button id="boton2">Continuar</button>
-      </div>
+    
     </section>
-    </section>
+    
 
     <main></main>
     <footer class="pie-pagina">
