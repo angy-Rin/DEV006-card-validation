@@ -70,7 +70,7 @@ function myFunction1() {
 
 function myFunction2() {
   const creditCardNumber=cajaNumero.value;
-  const escondido = validator.Maskify(creditCardNumber);
+  const escondido = validator.maskify(creditCardNumber);
   liveNumero.innerHTML = escondido;
  
   if (!cajaNumero.value){
@@ -185,7 +185,7 @@ function Confirmacion(){
     re=1;
   }
   const creditCardNumber=cajaNumero.value;
-  const valido=validator.IsValid(creditCardNumber)
+  const valido=validator.isValid(creditCardNumber)
 
   if ( valido === true){
     rf=1;

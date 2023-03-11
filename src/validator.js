@@ -1,6 +1,6 @@
 
 const validator = {
-  Maskify: function(creditCardNumber) {
+  maskify: function(creditCardNumber) {
     const x=creditCardNumber.replace(/\s/g, '').split("");
     let i=0;
     while (i < x.length - 4) {
@@ -10,7 +10,7 @@ const validator = {
     return x.join("");
   },
     
-  IsValid: function(creditCardNumber){
+  isValid: function(creditCardNumber){
     let y=0;
     const x=creditCardNumber.replace(/\s/g, '').split("").reverse();
     let suma=0;
