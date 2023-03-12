@@ -41,4 +41,51 @@ describe('validator', () => {
       expect(validator.maskify('helloworld')).toBe('######orld');
     });
   });
+
+  describe('validator.franquicia', () => {
+   
+    it('Debería retornar "MasterCard" para "5105105105105100"', () => {
+      expect(validator.franquicia("5105105105105100")).toBe("MasterCard");
+    });
+
+    it('Debería retornar "Diners Club / Carte Blanche" para "30569309025904"', () => {
+      expect(validator.franquicia("30569309025904")).toBe("Diners Club / Carte Blanche");
+    });
+
+    it('Debería retornar "JCB" para "3530111333300000"', () => {
+      expect(validator.franquicia('3530111333300000')).toBe('JCB');
+    });
+
+    it('Debería retornar "Diners Club / enRoute" para "201477457246665"', () => {
+      expect(validator.franquicia('201477457246665')).toBe('Diners Club / enRoute');
+    });
+
+    it('Debería retornar "Discover" para "6011111111111117"', () => {
+      expect(validator.franquicia('6011111111111117')).toBe('Discover');
+    });
+
+    it('Debería retornar "Diners Club / Carte Blanche" para "30223171276472"', () => {
+      expect(validator.franquicia('30223171276472')).toBe('Diners Club / Carte Blanche');
+    });
+
+    it('Debería retornar "American Express" para "371449635398431"', () => {
+      expect(validator.franquicia('371449635398431')).toBe('American Express');
+    });
+
+    it('Debería retornar "Diners Club / International" para "36614750633428"', () => {
+      expect(validator.franquicia('36614750633428')).toBe('Diners Club / International');
+    });
+
+    it('Debería retornar "JCB" para "3530111333300000"', () => {
+      expect(validator.franquicia('3530111333300000')).toBe('JCB');
+    });
+
+    it('Debería retornar "Visa" para "4111111111111111"', () => {
+      expect(validator.franquicia('4111111111111111')).toBe('Visa');
+    });
+
+    it('Debería retornar "Franquicia no identificada" para "0567548757478987"', () => {
+      expect(validator.franquicia('0567548757478987')).toBe('Franquicia no identificada');
+    });
+  });
 });

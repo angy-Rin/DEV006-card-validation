@@ -14,6 +14,7 @@ const liveNumero = document.getElementById("live-tarjeta")
 const liveMes = document.getElementById("live-mes")
 const liveYear = document.getElementById("live-año")
 const liveCvc = document.getElementById("live-cvc")
+const livefranquicia = document.getElementById("franquicia")
 
 const cajaNombre = document.getElementById("nombre-tarjeta")
 const cajaNumero = document.getElementById("numero-tarjeta")
@@ -72,6 +73,8 @@ function myFunction2() {
   const creditCardNumber=cajaNumero.value;
   const escondido = validator.maskify(creditCardNumber);
   liveNumero.innerHTML = escondido;
+  const mensaje = validator.franquicia(creditCardNumber);
+  livefranquicia.innerHTML = mensaje;
  
   if (!cajaNumero.value){
     liveNumero.innerHTML = ceros;
