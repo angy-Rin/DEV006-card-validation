@@ -28,11 +28,11 @@ const errorYear = document.getElementById("erroraño")
 const errorMes = document.getElementById("errormes")
 const errorCvc = document.getElementById("errorcvc")
 
-cajaNombre.onkeyup = function() {myFunction1()};
-cajaNumero.onkeyup = function() {myFunction2()};
-cajaMes.onkeyup = function() {myFunction3()};
-cajaYear.onkeyup = function() {myFunction4()};
-cajaCvc.onkeyup = function() {myFunction5()};
+cajaNombre.onkeyup = function() {Livefunction(liveNombre, cajaNombre.value, cajaNombre.placeholder)};
+cajaNumero.onkeyup = function() {LivefunctionNumero()};
+cajaMes.onkeyup = function() {Livefunction(liveMes, cajaMes.value,cero)};
+cajaYear.onkeyup = function() {Livefunction(liveYear, cajaYear.value, cero)};
+cajaCvc.onkeyup = function() {Livefunction(liveCvc, cajaCvc.value, cvc)};
 
 
 boton1.addEventListener("click", Confirmacion);
@@ -62,14 +62,7 @@ cajaNumero.addEventListener('keyup', (e) =>{
 )
 
 
-function myFunction1() {
-  liveNombre.innerHTML=cajaNombre.value;
-  if (!cajaNombre.value){
-    liveNombre.innerHTML = cajaNombre.placeholder;
-  }
-}
-
-function myFunction2() {
+function LivefunctionNumero() {
   const creditCardNumber=cajaNumero.value;
   const escondido = validator.maskify(creditCardNumber);
   liveNumero.innerHTML = escondido;
@@ -78,6 +71,15 @@ function myFunction2() {
  
   if (!cajaNumero.value){
     liveNumero.innerHTML = ceros;
+  }
+}
+/*
+
+
+function myFunction1() {
+  liveNombre.innerHTML=cajaNombre.value;
+  if (!cajaNombre.value){
+    liveNombre.innerHTML = cajaNombre.placeholder;
   }
 }
 
@@ -99,6 +101,13 @@ function myFunction5() {
   liveCvc.innerHTML = cajaCvc.value;
   if (!cajaCvc.value){
     liveCvc.innerHTML = cvc;
+  }
+}
+*/
+function Livefunction(live,caja,placeholder){
+  live.innerHTML = caja;
+  if (!caja){
+    live.innerHTML = placeholder;
   }
 }
 
