@@ -97,7 +97,4 @@ const validator = {
     return mensaje;
   }
 };
-
 export default validator;
-
-

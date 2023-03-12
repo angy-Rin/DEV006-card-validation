@@ -73,37 +73,7 @@ function LivefunctionNumero() {
     liveNumero.innerHTML = ceros;
   }
 }
-/*
 
-
-function myFunction1() {
-  liveNombre.innerHTML=cajaNombre.value;
-  if (!cajaNombre.value){
-    liveNombre.innerHTML = cajaNombre.placeholder;
-  }
-}
-
-function myFunction3() {
-  liveMes.innerHTML = cajaMes.value;
-  if (!cajaMes.value){
-    liveMes.innerHTML = cero;
-  }
-}
-
-function myFunction4() {
-  liveYear.innerHTML = cajaYear.value;
-  if (!cajaYear.value){
-    liveYear.innerHTML = cero;
-  }
-}
-
-function myFunction5() {
-  liveCvc.innerHTML = cajaCvc.value;
-  if (!cajaCvc.value){
-    liveCvc.innerHTML = cvc;
-  }
-}
-*/
 function Livefunction(live,caja,placeholder){
   live.innerHTML = caja;
   if (!caja){
@@ -113,6 +83,7 @@ function Livefunction(live,caja,placeholder){
 
 function Confirmacion(){
   const regExp = /[a-zA-Z]/g;
+  const regExpnum = /\d+/g;
   const mensaje="Solo se aceptan numeros";
   const mensaje2="Dato en blanco";
   const mensaje3="Solo se aceptan letras";
@@ -126,7 +97,9 @@ function Confirmacion(){
 
   const colorojo= "1px solid hsl(0, 100%, 66%)";
 
-  if ((/\d+/g).test(cajaNombre.value)) {
+
+
+  if ((regExpnum).test(cajaNombre.value)) {
     errorNombre.innerHTML = mensaje3;
     cajaNombre.style.border = colorojo;
   } else if (!cajaNombre.value){
