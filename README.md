@@ -1,35 +1,38 @@
 # Tarjeta de crédito válida
-
+Quiénes son los principales usuarios de producto.
+Cuáles son los objetivos de estos usuarios en relación con tu producto.
+Cómo crees que el producto que estás creando está resolviendo sus problemas.
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Consideraciones generales](#3-consideraciones-generales)
-* [4. Hito: Criterios de aceptación mínimos del proyecto](#4-hito-criterios-de-aceptación-mínimos-del-proyecto)
-* [5. Hito Opcional: Mostrar la franquicia de tarjeta](#5-hito-opcional-mostrar-la-franquicia-de-tarjeta)
-* [6. Consideraciones técnicas](#6-consideraciones-técnicas)
-* [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Para considerar Project Feedback](#9-para-considerar-project-feedback)
+* [1. Introduccion](#1-introducción)
+* [2. Experiencia de usuario](#2-experiencia-de-usuario)
+* [3. Experiencia de usuario](#3-decisiones-de-diseño)
 
 ***
+## 1. Introducción
 
-## 1. Preámbulo
 
-El [algoritmo de Luhn](https://es.wikipedia.org/wiki/Algoritmo_de_Luhn),
-también llamado algoritmo de módulo 10, es un método de suma de verificación,
-se utiliza para validar números de identificación; tales como el IMEI de los
-celulares, tarjetas de crédito, etc.
 
-Este algoritmo es simple. Obtenemos la reversa del número a verificar (que
-solamente contiene dígitos [0-9]); a todos los números que ocupan una posición
-par se les debe multiplicar por dos, si este número es mayor o igual a 10,
-debemos sumar los dígitos del resultado; el número a verificar será válido si
-la suma de sus dígitos finales es un múltiplo de 10.
+## 2. Experiencia de usuario
+
+El contexto en el que englobe este programa fue la simulacion de una pagina de e-commerce especializado en usuarios que tienen mascotas y deseen adquirir productos relacionados de primera y segunda necesidad (ropa, hábitat). El usuario podra validar sus datos de tarjeta, destinada a servir como método de pago, mediante una página html. Una vez que el usuario seleccione el botón "confirmar" se verificara si los datos cumplen con las siguientes condiciones:
+
+* Ningun input se encuentra vacio.
+* El input nombre no contiene números.
+* El input del numero de tarjeta no contiene letras.
+* El input del numero de tarjeta cumple con el algoritmo de Luhn.
+* El input del mes se encuentra dentro del rango 1 al 12.
+* El input del año es igual o mayor al año actual.
+* El input de CCV tiene una extension de 3 digitos.
+
+Si cumple con todas esas condiciones, se le verificara al usuario que sus datos son correctos y podria continuar con su compra. Aunado a ello, el usuario podra verificar si su tarjeta corresponde
+a alguna franquicia y ademas, visualizará el número con caracteres ocultos. Estos dos ultimos puntos no significarian la aprobacion o rechazo de sus datos bancarios.
+
+De esta forma, el usuario podra tener acceso a una plataforma coherente para validar sus datos bancarios con la finalidad de comprar productos de una manera rapida.
 
 ![gráfica de algoritmo de Luhn](https://user-images.githubusercontent.com/12631491/217016579-865679e0-0949-4afd-b13f-d2ebba7a0c54.png)
 
-## 2. Resumen del proyecto
+## 3. Decisiones de diseño
 
 En este proyecto tendrás que construir una aplicación web que le permita a un
 usuario validar el número de una tarjeta de crédito. Además, tendrás que
