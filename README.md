@@ -1,7 +1,5 @@
 # Tarjeta de crédito válida
-Quiénes son los principales usuarios de producto.
-Cuáles son los objetivos de estos usuarios en relación con tu producto.
-Cómo crees que el producto que estás creando está resolviendo sus problemas.
+
 ## Índice
 
 * [1. Introduccion](#1-introducción)
@@ -30,25 +28,14 @@ a alguna franquicia y ademas, visualizará el número con caracteres ocultos. Es
 
 De esta forma, el usuario podra tener acceso a una plataforma coherente para validar sus datos bancarios con la finalidad de comprar productos de una manera rapida.
 
-![gráfica de algoritmo de Luhn](https://user-images.githubusercontent.com/12631491/217016579-865679e0-0949-4afd-b13f-d2ebba7a0c54.png)
+
+
 
 ## 3. Decisiones de diseño
 
-En este proyecto tendrás que construir una aplicación web que le permita a un
-usuario validar el número de una tarjeta de crédito. Además, tendrás que
-implementar funcionalidad para ocultar todos los dígitos de una tarjeta menos
-los últimos cuatro.
+Hice un prototipo de baja fidelidad donde exploraba la idea de tener una interfaz con figuras redondeadas y colores pastel, expresando asi mi propio concepto de un conejo domestico a mi interfaz de usuario. 
 
-La temática es libre. Tú debes pensar en qué situaciones de la vida real se
-necesitaría validar una tarjeta de crédito y pensar en cómo debe ser esa
-experiencia de uso (qué pantallas, explicaciones, mensajes, colores, ¿marca?)
-etc.
-
-Como continuación del proyecto de preadmisión, volverás a trabajar sobre
-fundamentos de JavaScript, incluyendo conceptos como variables, condicionales,
-y funciones, así como eventos y manipulación básica del DOM, fundamentos de
-HTML y CSS. Mientras desarrollas este proyecto, te familiarizarás con nuevos
-conceptos también.
+![paleta de colores](src/images/paleta-colores.png)
 
 ### Los objetivos generales de este proyecto son los siguientes
 
