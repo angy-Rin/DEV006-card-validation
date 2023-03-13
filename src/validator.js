@@ -1,7 +1,7 @@
 
 const validator = {
   maskify: function(creditCardNumber) {
-    const x=creditCardNumber.replace(/\s/g, '').split("");
+    const x=creditCardNumber.replace(/\s/g, "").split("");
     let i=0;
     while (i < x.length - 4) {
       x[i] = "#";
@@ -12,7 +12,7 @@ const validator = {
     
   isValid: function(creditCardNumber){
     let y=0;
-    const x=creditCardNumber.replace(/\s/g, '').split("").reverse();
+    const x=creditCardNumber.replace(/\s/g, "").split("").reverse();
     let suma=0;
     let suma2=0;
     for (let i = 0; i < x.length; i++) {
@@ -37,7 +37,7 @@ const validator = {
   franquicia: function(creditCardNumber){
     let mensaje=0;
     let y=0;
-    const x=creditCardNumber.replace(/\s/g, '').split("");
+    const x=creditCardNumber.replace(/\s/g, "").split("");
 
     function Array(index) {
       const NewArray = x.slice(0,index).map(index => index);

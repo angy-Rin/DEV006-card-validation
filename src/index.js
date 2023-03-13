@@ -171,7 +171,6 @@ function Confirmacion(){
 
   if ( valido === true){
     rf=1;
-    cajaCvc.style.border = null;
   }else{
     errorNumero.innerHTML = "Número de tarjeta no válido";
     cajaNumero.style.border = colorojo;
