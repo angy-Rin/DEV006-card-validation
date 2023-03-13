@@ -23,6 +23,8 @@ El programa evaluará las siguientes condiciones:
 
 Interfaz de usuario:
 
+![prototipo](src/images/Captura0.PNG)
+
 ![prototipo](src/images/Captura.PNG)
 
 ## 2. Experiencia de usuario
